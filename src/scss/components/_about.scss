@@ -1,0 +1,45 @@
+.about {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: var(--white-color);
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 60px;
+    max-width: 892px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 160%;
+    color: var(--jaguar-color);
+
+    &-highlight {
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+  }
+
+  &__digit {
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 160%;
+    color: var( --fire-engine-red-color);
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--jaguar-07-color);
+  }
+}
+
