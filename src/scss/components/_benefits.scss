@@ -1,0 +1,32 @@
+.benefits {
+  background-color: var(--snow-color);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+  }
+
+  &__item {
+    grid-column: 4 span;
+  }
+
+  &__subtitle {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+    color: var(--jaguar-color);
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--jaguar-07-color);
+  }
+}
