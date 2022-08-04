@@ -9,6 +9,10 @@
 
   .swiper-slide {
     width: 360px;
+
+    @include small-tablet {
+      width: 220px;
+    }
   }
 
   .swiper-scrollbar-drag {
@@ -19,6 +23,10 @@
     margin-bottom: 20px;
     border-radius: 20px;
     max-height: 500px;
+
+    @include small-tablet {
+      max-height: 306px;
+    }
   }
 
   &__name {
@@ -57,8 +65,12 @@
     background: rgba(20, 16, 36, 0.08);
   }
 
-  &__slider-btns {
-    @include flex-v-center
+  &__btns {
+    @include flex-v-center;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__slider-btn {
