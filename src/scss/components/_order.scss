@@ -2,7 +2,8 @@
   padding: 87px 0;
   background-color: var(--fire-engine-red-color);
   background-image: url("../img/percents.svg");
-  background-position: bottom;
+  background-size: cover;
+  background-position: bottom center;
 
   &__container {
     display: grid;

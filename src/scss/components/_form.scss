@@ -4,8 +4,15 @@
   width: 100%;
 
   &__label {
-    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
     width: 100%;
+  }
+
+  .just-validate-error-label {
+    color: var(--white-color) !important;
+    margin-bottom: 3px;
   }
 
   &__input {
