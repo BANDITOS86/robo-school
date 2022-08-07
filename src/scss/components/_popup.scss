@@ -1,12 +1,37 @@
-.graph-modal__close {
+.modal__close {
+  position: absolute;
   right: 40px;
   top: 40px;
   width: auto;
   height: auto;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 160%;
-  color: var(--jaguar-07-color);
+
+  &--text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--jaguar-07-color);
+  }
+
+  @include small-tablet {
+    & {
+      display: none;
+    }
+  }
+
+  &--img {
+    display: none;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/closeModal.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include small-tablet {
+      & {
+        display: block;
+      }
+    }
+  }
 }
 
 .popup {

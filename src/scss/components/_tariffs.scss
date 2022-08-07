@@ -23,30 +23,31 @@
     border: 1px solid rgba(20, 16, 36, 0.2);
     border-radius: 20px;
     padding: 40px;
+    transition: background-color .3s ease-in-out, transform .3s ease-in-out;
 
-    &--current {
-      border: 1px solid var(--jaguar-color);
-      background-color: var(--jaguar-color);
-      transform: scale(1.1);
+    @include hover {
+      + & {
+        background-color: var(--jaguar-color);
+        transform: scale(1.1);
 
-      .tariffs__subtitle {
-        color: var(--white-color);
+        .tariffs__subtitle {
+          color: var(--white-color);
+        }
+
+        .tariffs__price {
+          color: var(--white-color);
+        }
+
+        .tariffs__descr {
+          color: var(--white-color);
+        }
+
+        @include high-desktop {
+          transform: scale(1);
+        }
       }
-
-      .tariffs__price {
-        color: var(--white-color);
-      }
-
-      .tariffs__descr {
-        color: var(--white-color);
-      }
-
-      @include high-desktop {
-        transform: scale(1);
-      }
-
     }
-    
+
     @include small-tablet {
       grid-column: 8 span;
     }
@@ -62,6 +63,7 @@
     line-height: 160%;
     text-align: center;
     color: var(--jaguar-color);
+    transition: color .3s ease-in-out;
 
     &::before {
       content: "";
@@ -89,6 +91,7 @@
     line-height: 160%;
     text-align: center;
     color: var(--jaguar-color);
+    transition: color .3s ease-in-out;
 
     @include high-desktop {
       font-size: 45px;
@@ -107,6 +110,7 @@
     line-height: 160%;
     text-align: center;
     color: var(--jaguar-color);
+    transition: color .3s ease-in-out;
   }
 
   &__btn {
