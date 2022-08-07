@@ -118,6 +118,10 @@
     justify-content: space-between;
     max-width: 70%;
 
+    @include small-tablet {
+      max-width: 100%;
+    }
+
     &-btn {
       font-weight: 400;
       font-size: 20px;
