@@ -107,9 +107,38 @@
 }
 
 .tabs {
+
   &__menu {
+    position: relative;
     border-bottom: 1px solid rgba(20, 16, 36, 0.11);
     padding-bottom: 20px;
+
+    @include mobile {
+      & {
+        height: 42px;
+      }
+    }
+  }
+
+  &__selected {
+    display: none;
+
+    & > * {
+      pointer-events: none;
+    }
+
+    @include mobile {
+      & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+        height: 42px;
+        font-size: 16px;
+        line-height: 160%;
+        color: #fff;
+      }
+    }
   }
 
   &__nav {
@@ -121,6 +150,30 @@
     @include small-tablet {
       max-width: 100%;
     }
+
+    @include mobile {
+      & {
+        padding: 15px;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        background-color: #fff;
+        z-index: 5;
+        opacity: 0;
+        visibility: hidden;
+
+        &.is-active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &-item:not(:last-child) {
+        padding-bottom: 10px;
+      }
+    }
+
 
     &-btn {
       font-weight: 400;
