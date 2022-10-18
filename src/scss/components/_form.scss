@@ -4,6 +4,7 @@
   width: 100%;
 
   &__label {
+    position: relative;
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 10px;
@@ -11,7 +12,10 @@
   }
 
   .just-validate-error-label {
-    color: var(--white-color) !important;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    color: var(--fire-engine-red-color) !important;
     margin-bottom: 3px;
   }
 
@@ -24,6 +28,7 @@
     font-size: 18px;
     line-height: 26px;
     color: var(--jaguar-color);
+    outline: none;
 
     &::placeholder {
       color: rgba(40, 41, 68, 0.7);
