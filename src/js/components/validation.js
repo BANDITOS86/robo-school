@@ -5,7 +5,8 @@ const rules = [
     rules: [
       {
         rule: 'minLength',
-        value: 3
+        value: 2,
+        errorMessage: 'Минимальное количество символов 2!'
       },
       {
         rule: 'required',
