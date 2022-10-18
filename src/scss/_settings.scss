@@ -84,6 +84,12 @@ a {
   max-width: var(--container-width);
 }
 
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-fluid-width);
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
@@ -104,4 +110,12 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.section-offset {
+  padding: 120px 0;
+
+  @include mobile {
+    padding: 80px 0;
+  }
 }

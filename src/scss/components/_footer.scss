@@ -1,0 +1,32 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--jaguar-color);
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include mobile {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__copy {
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.7);
+
+    @include mobile {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+}
