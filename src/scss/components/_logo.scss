@@ -1,4 +1,8 @@
 .logo {
+  width: 226px;
+  padding-top: 3px;
+  padding-left: 2px;
+
   @include mobile {
     width: 136px;
     height: 13px;
