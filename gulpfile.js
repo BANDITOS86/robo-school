@@ -106,7 +106,7 @@ const styles = () => {
       overrideBrowserslist: ["last 5 versions"]
     }))
     .pipe(gulpif(isProd, cleanCSS({
-      level: 2
+      level: 1
     })))
     .pipe(dest(paths.buildCssFolder, { sourcemaps: '.' }))
     .pipe(browserSync.stream());
@@ -249,7 +249,10 @@ const htmlInclude = () => {
       basepath: '@file'
     }))
     .pipe(typograf({
-      locale: ['ru', 'en-US']
+      locale: ['ru', 'en-US'],
+      safeTags: [
+        ['<no-typography>', '</no-typography>']
+      ],
     }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
