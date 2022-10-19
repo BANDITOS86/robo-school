@@ -160,7 +160,7 @@
   &__link {
     @include small-tablet {
       margin-top: auto;
-      z-index: 1;
+      z-index: 0;
     }
 
     @include mobile {
