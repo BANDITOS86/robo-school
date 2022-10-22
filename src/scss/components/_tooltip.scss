@@ -1,6 +1,11 @@
 .tooltip {
   margin-left: 10px;
 
+  @include mobile {
+    margin-left: 13.7px;
+    padding-bottom: 8px;
+  }
+
   &__btn {
     @include flex-all-center;
 
@@ -44,7 +49,10 @@
     transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
 
     @include mobile {
-      max-width: 180px;
+      max-width: 224px;
+      font-size: 14px;
+      left: 39%;
+      width: 100%;
     }
   }
 }
