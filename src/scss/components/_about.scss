@@ -1,6 +1,10 @@
 .about {
   background-color: var(--white-color);
 
+  @include mobile {
+    padding-bottom: 58px;
+  }
+
   &__descr {
     margin: 0;
     margin-bottom: 60px;
@@ -13,6 +17,11 @@
     &-highlight {
       font-weight: 600;
     }
+
+    @include mobile {
+      margin-bottom: 35px;
+      font-size: 20px;
+    }
   }
 
   &__list {
@@ -22,6 +31,7 @@
 
     @include mobile {
       grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
     }
   }
 
@@ -34,6 +44,9 @@
 
     @include mobile {
       grid-column: 4 span;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -42,6 +55,11 @@
     font-size: 70px;
     line-height: 160%;
     color: var( --fire-engine-red-color);
+
+    @include mobile {
+      font-size: 60px;
+      line-height: 94px;
+    }
   }
 
   &__text {
@@ -50,6 +68,12 @@
     font-size: 18px;
     line-height: 160%;
     color: var(--jaguar-07-color);
+
+    @include mobile {
+      max-width: 270px;
+      font-size: 16px;
+      text-align: center;
+    }
   }
 }
 

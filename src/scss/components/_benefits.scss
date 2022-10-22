@@ -1,5 +1,21 @@
 .benefits {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: var(--snow-color);
+
+  @include mobile {
+    padding-top: 39px;
+    padding-bottom: 53px;
+  }
+
+  &__title {
+    @include mobile {
+      margin-bottom: 41px;
+      font-size: 30px;
+      line-height: 140%;
+      text-align: center;
+    }
+  }
 
   &__list {
     display: grid;
@@ -8,6 +24,7 @@
 
     @include mobile {
       grid-template-columns: repeat(4, 1fr);
+      gap: 31px;
     }
   }
 
@@ -20,6 +37,9 @@
 
     @include mobile {
       grid-column: 4 span;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -32,6 +52,18 @@
     font-size: 24px;
     line-height: 160%;
     color: var(--jaguar-color);
+
+    @include mobile {
+      & {
+        margin-bottom: 10px;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      &--tooltip {
+        padding-left: 38px;
+      }
+    }
   }
 
   &__descr {
@@ -40,5 +72,10 @@
     font-size: 18px;
     line-height: 160%;
     color: var(--jaguar-07-color);
+
+    @include mobile {
+      font-size: 16px;
+      text-align: center;
+    }
   }
 }

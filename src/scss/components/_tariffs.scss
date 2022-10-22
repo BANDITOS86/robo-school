@@ -1,5 +1,20 @@
 .tariffs {
-  padding-top: 0;
+  padding-top: 60px;
+  padding-bottom: 140px;
+
+  @include mobile {
+    padding-top: 30px;
+    padding-bottom: 60.5px;
+  }
+
+  &__title {
+    margin-bottom: 81px;
+
+    @include mobile {
+      margin-bottom: 55px;
+      text-align: center;
+    }
+  }
 
   &__list {
     display: grid;
@@ -13,6 +28,10 @@
     @include small-tablet {
       grid-template-columns: repeat(8, 1fr);
     }
+
+    @include mobile {
+      gap: 36px;
+    }
   }
 
   &__item {
@@ -22,7 +41,8 @@
     grid-column: 4 span;
     border: 1px solid rgba(20, 16, 36, 0.2);
     border-radius: 20px;
-    padding: 40px;
+    padding: 39px 39px 40px 39px;
+    min-height: 460px;
     transition: background-color .3s ease-in-out, transform .3s ease-in-out;
 
     @include hover {
@@ -45,11 +65,20 @@
         @include high-desktop {
           transform: scale(1);
         }
+
+        @include mobile {
+          transform: scaleY(1.065);
+        }
       }
     }
 
     @include small-tablet {
       grid-column: 8 span;
+    }
+
+    @include mobile {
+      padding: 39px 19px 40px 19px;
+      min-height: 394px;
     }
   }
 
@@ -64,6 +93,10 @@
     text-align: center;
     color: var(--jaguar-color);
     transition: color .3s ease-in-out;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
 
     &::before {
       content: "";
@@ -100,11 +133,15 @@
     @include high-tablet {
       font-size: 32px;
     }
+
+    @include mobile {
+      margin-bottom: 21px;
+      font-size: 50px;
+    }
   }
 
   &__descr {
     margin: 0;
-    margin-bottom: auto;
     font-weight: 400;
     font-size: 18px;
     line-height: 160%;
@@ -114,12 +151,16 @@
   }
 
   &__btn {
-    margin-top: 61px;
+    margin-top: auto;
     min-width: 100%;
 
     @include high-tablet {
       padding: 10px 20px;
       font-size: 16px;
+    }
+
+    @include mobile {
+      padding: 17px 20px;
     }
   }
 }

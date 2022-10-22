@@ -1,10 +1,35 @@
 .trainers {
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    @include mobile {
+      margin-bottom: 40.5px;
+      font-size: 30px;
+      line-height: 140%;
+      text-align: center;
+    }
+  }
+
   &__wrapper {
     padding-left: max(15px, calc((100% - var(--content-width)) / 2));
+
+    @include mobile {
+      padding-left: max(10px, (100% - var(--content-width)) / 2);
+    }
   }
 
   &__content {
-    margin-bottom: 77px;
+    margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 18px;
+    }
   }
 
   .swiper-slide {
@@ -20,12 +45,16 @@
   }
 
   &__image {
-    margin-bottom: 20px;
+    margin-bottom: 16.5px;
     border-radius: 20px;
     max-height: 500px;
 
     @include small-tablet {
       max-height: 306px;
+    }
+
+    @include mobile {
+      margin-bottom: 17px;
     }
   }
 
@@ -40,6 +69,10 @@
     @include small-tablet {
       font-size: 18px;
     }
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__post {
@@ -53,6 +86,11 @@
     @include small-tablet {
       font-size: 16px;
     }
+
+    @include mobile {
+      margin-bottom: 20.5px;
+      font-size: 14px;
+    }
   }
 
   &__btn {
@@ -60,10 +98,15 @@
     font-size: 18px;
     line-height: 160%;
     color: var(--fire-engine-red-color);
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__nav {
     @include flex-all-sb;
+    width: 99.14%;
   }
 
   &__scroll {
@@ -71,6 +114,10 @@
     width: 360px;
     height: 5px;
     background: rgba(20, 16, 36, 0.08);
+
+    @include mobile {
+      height: 2.5px;
+    }
   }
 
   &__btns {
