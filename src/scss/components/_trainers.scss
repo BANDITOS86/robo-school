@@ -2,6 +2,11 @@
   padding-top: 120px;
   padding-bottom: 60px;
 
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
   &__title {
     @include mobile {
       margin-bottom: 40.5px;
@@ -21,6 +26,10 @@
 
   &__content {
     margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 18px;
+    }
   }
 
   .swiper-slide {
@@ -43,6 +52,10 @@
     @include small-tablet {
       max-height: 306px;
     }
+
+    @include mobile {
+      margin-bottom: 17px;
+    }
   }
 
   &__name {
@@ -55,6 +68,10 @@
 
     @include small-tablet {
       font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 20px;
     }
   }
 
@@ -69,6 +86,11 @@
     @include small-tablet {
       font-size: 16px;
     }
+
+    @include mobile {
+      margin-bottom: 20.5px;
+      font-size: 14px;
+    }
   }
 
   &__btn {
@@ -76,6 +98,10 @@
     font-size: 18px;
     line-height: 160%;
     color: var(--fire-engine-red-color);
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__nav {
@@ -88,6 +114,10 @@
     width: 360px;
     height: 5px;
     background: rgba(20, 16, 36, 0.08);
+
+    @include mobile {
+      height: 2.5px;
+    }
   }
 
   &__btns {

@@ -33,9 +33,18 @@
     &::placeholder {
       color: rgba(40, 41, 68, 0.7);
     }
+
+    @include mobile {
+      height: 60px;
+    }
   }
 
   &__btn {
     padding: 18px 30px;
+
+    @include mobile {
+      padding: 17px 30px;
+      font-size: 16px;
+    }
   }
 }

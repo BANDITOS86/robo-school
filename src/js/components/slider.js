@@ -14,7 +14,7 @@ const swiper = new Swiper('.trainers__content', {
   breakpoints: {
     576: {
       spaceBetween: 20,
-      slidesPerView: 2,
+      slidesPerView: 2.375,
     },
     // when window width is >= 640px
     768: {
