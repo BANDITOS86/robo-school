@@ -1,5 +1,6 @@
 .tooltip {
   margin-left: 10px;
+  padding-bottom: 12px;
 
   @include mobile {
     margin-left: 13.7px;
@@ -51,7 +52,7 @@
     @include mobile {
       max-width: 224px;
       font-size: 14px;
-      left: 39%;
+      left: 39% !important;
       width: 100%;
     }
   }

@@ -3,9 +3,13 @@
   padding-bottom: 40px;
   background-color: var(--jaguar-color);
 
+  &__left {
+    padding-top: 9px;
+  }
+
   &__logo {
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 
   &__container {

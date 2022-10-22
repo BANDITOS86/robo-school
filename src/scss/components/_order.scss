@@ -1,5 +1,6 @@
 .order {
-  padding: 87px 0;
+  padding-top: 86.5px;
+  padding-bottom: 86.5px;
   background-color: var(--fire-engine-red-color);
   background-image: url("../img/percents.svg");
   background-size: cover;
@@ -12,6 +13,7 @@
 
   &__left {
     grid-column: 5 span;
+    padding-top: 19px;
     padding-left: 60px;
 
     @include high-tablet {
