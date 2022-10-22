@@ -6,12 +6,20 @@
   width: 100%;
   z-index: 1;
 
+  @include mobile {
+    padding: 9px 0;
+  }
+
   &__container {
     @include flex-all-sb;
 
     @include high-tablet {
       align-items: center;
       justify-content: initial;
+    }
+
+    @include mobile {
+      padding: 0 10px;
     }
   }
 
