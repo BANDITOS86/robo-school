@@ -139,6 +139,23 @@
         color: #fff;
         cursor: pointer;
       }
+
+      &-icon {
+        position: absolute;
+        top: 44%;
+        right: 35%;
+        width: 8px;
+        height: 8px;
+        background-image: url('../img/arrow.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: rotate(0deg);
+        transition: transform .3s ease-in-out;
+
+        &.is-active {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 
@@ -155,6 +172,7 @@
     @include mobile {
       & {
         position: absolute;
+        left: -200%;
         width: 100%;
         height: auto;
         flex-direction: column;
@@ -165,11 +183,12 @@
         border: 1px solid var(--jaguar-color);
         border-top: none;
         border-radius: 0 0 10px 10px;
-        transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+        transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
 
         &.is-active {
           opacity: 1;
           visibility: visible;
+          transform: translateX(200%);
         }
       }
 
